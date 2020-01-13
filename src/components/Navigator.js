@@ -17,7 +17,6 @@ class Navigator extends React.Component{
 											mapImg,
 											linkMap
 										}
-										
 									}}>{id}</Link>
 							</li>
 						))
