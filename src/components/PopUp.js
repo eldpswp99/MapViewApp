@@ -1,35 +1,26 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import StoreInfo from "./StoreInfo";
 
 class PopUp extends React.Component{
 
-	
 	render(){
-		const {_id,storeImg,name,openHour,callNumber,kind} = this.props.store;
+		const {_id,storeImg,name} = this.props.store;
+		
+		console.log(this.props.store);
 		
 		return (
 			<div className = "store-popup">
-				<button className = "popup-remove-btn" onClick={() => this.props.action(_id)} arg = {_id}>X</button>
-				<img src = {storeImg} alt = {name}></img>
-				<h3 className = "store-name">{name}</h3>
-				<h3 className = "store-kind">{kind}</h3>
-				<h5 className = "store-openhour">{openHour}</h5>
-				<h5 className = "store-callnumber">{callNumber}</h5>
+				<div className = "popup-content">
+					<button className = "popup-remove-btn" onClick={() => this.props.action(_id,false)} >X</button>
+					<h2>{name}</h2>
+					<img className = "popupimg" src = {storeImg} alt = {name}></img>
+					<StoreInfo store = {this.props.store} />
+				</div>
 			</div>
 		)
 	}
 }
 
-PopUp.propTypes = {
-	action : PropTypes.func,
-	store : PropTypes.shape({
-		_id : PropTypes.string.isRequired,
-		storeImg : PropTypes.string.isRequired,
-		name : PropTypes.string.isRequired,
-		openHour : PropTypes.string.isRequired,
-		callNumber : PropTypes.string.isRequired,
-		kind : PropTypes.string.isRequired
-	})
-}
 
 export default PopUp;

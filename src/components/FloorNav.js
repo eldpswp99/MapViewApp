@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import floors from "../data/floors";
 
-class Navigator extends React.Component{
+class FloorNav extends React.Component{
 	render(){
 		return (
 			<nav className = "floor">
@@ -11,7 +11,7 @@ class Navigator extends React.Component{
 						floors.map(({id,mapImg,linkMap}) => (
 							<li key = {id}>
 								<Link to = {{
-										pathname : `/${id}`,
+										pathname : `/floor/${id}`,
 										state : {
 											id,
 											mapImg,
@@ -27,4 +27,4 @@ class Navigator extends React.Component{
 	}
 }
 
-export default Navigator;
+export default FloorNav;

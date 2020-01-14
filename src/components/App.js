@@ -1,18 +1,23 @@
 import React from "react";
 import {HashRouter,Route} from "react-router-dom";
-import Navigator from "./Navigator";
-import Map from "../routes/Map"
+import Floor from "./Floor";
+import Category from "./Category";
+import Header from "./Header";
+import Popup from "reactjs-popup";
 
 function App(){	
 	
 	return (
-		<HashRouter>
-			<Navigator />
-			<Route path = {"/"} exact = {true} component = {Map}/>
-			<Route path = {"/:id"} component = {Map}/>
+		<div className = "container">
 			
-		</HashRouter>
-	)
+			<HashRouter>
+				<Header />
+				<Route path = {"/"} exact = {true} component = {Floor}/>
+				<Route path = {"/floor/:id"} component = {Floor}/>
+				<Route path = {"/category"} component = {Category} />
+			</HashRouter>
+		</div>
+	);
 }
 
 export default App;
