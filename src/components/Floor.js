@@ -1,13 +1,13 @@
 import React from "react";
 import floors from "../data/floors";
-import stores from "../data/stores";
 import { Redirect } from "react-router-dom"; 
 import PopUp from "./PopUp"
 import ImageMapper from 'react-image-mapper';
-import StoreInfo from "./StoreInfo";
 import FloorNav from "./FloorNav";
+import StoreList from "./StoreList";
 import CategoryNav from "./CategoryNav";
 import categories from "../data/categories";
+import "./Floor.css";
 
 class Floor extends React.Component{
 	constructor(props){
@@ -39,13 +39,14 @@ class Floor extends React.Component{
 	render(){		
 		const {location : {state}} = this.props;
 		if(!state){
-			const {id,mapImg,linkMap} = floors[0];			
+			const {id,mapImg,linkMap,imgWidth} = floors[0];			
 		
 			return (<Redirect to = {{
 				pathname : `/floor/${id}`,
 				state : {
 					id,
 					mapImg,
+					imgWidth,
 					linkMap
 				}
 			}}/>);	
@@ -56,37 +57,30 @@ class Floor extends React.Component{
 	console.log(this.state);
 	return (
 		<div className = "floor">
-		<FloorNav />
 			
-			
-			<div className = "Map">
-				<h1>{state.id}</h1>
-				<ImageMapper src = {state.mapImg} map ={state.linkMap}
+		<FloorNav />	
+			<div className = "map">
+				<ImageMapper className = "mapimg" src = {state.mapImg} map ={state.linkMap}
 					onClick = {area => {this.setIsPopUp(area._id,true)}}
+					width = {window.innerWidth*0.9}
+					imgWidth = {state.imgWidth}
 				/>
-				{areas.map(store => {
-					return popUp === store._id ? <PopUp action ={this.setIsPopUp} store = {store} key = {store._id}/> : "";
-				})}
 			</div>
-			
-			
+						
 			<div className = "categorynav">
 				{categories.map(category => 
 					(<CategoryNav category = {category} action = {this.setCategory} key = {category}/>)
 				)}
 			</div>
 			
+			<div className = "floorstorelist">
+				<StoreList floor = {state.id} stores = {areas} category = {category} action = {this.setIsPopUp}></StoreList>
+			</div>
 			
-			<ul className = "storelist">
-				{areas.map(store => 
-					{console.log(store);					
-					return (store.location === state.id && (category === store.category || this.state.category === "All")) ?
-					(<li className = "storeelem" key = {store._id}>
-					<img className = "listoreimg" src = {store.storeImg} alt = {store.name} ></img> 
-					<StoreInfo store = {store} />
-					</li>) : ""}
-				)}
-			</ul>
+			{areas.map(store => {
+				return popUp === store._id ? <PopUp action ={this.setIsPopUp} store = {store} key = {store._id}/> : "";
+			})}
+			
 		</div>
 		);		
 	}

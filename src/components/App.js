@@ -3,7 +3,7 @@ import {HashRouter,Route} from "react-router-dom";
 import Floor from "./Floor";
 import Category from "./Category";
 import Header from "./Header";
-import Popup from "reactjs-popup";
+import "./App.css";
 
 function App(){	
 	

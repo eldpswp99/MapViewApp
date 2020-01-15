@@ -1,0 +1,22 @@
+.headernav {
+	border : 1px solid black;
+	display : table;
+	width : 100%;
+	background : #444;
+	height: 40px;
+	table-layout: fixed;
+	border-collapse : collapse;
+}
+
+.link{
+	display : table-cell;
+	vertical-align : middle;
+	border : 1px solid black;
+	text-align : center;
+	border-collapse : collapse;
+}
+
+.link a{
+	color : white;
+}
+

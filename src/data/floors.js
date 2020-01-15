@@ -4,6 +4,7 @@ const floors = [
 	{
 		id : "1F",
 		mapImg : "./images/1F.png",
+		imgWidth : 572,
 		linkMap : {
 			name : "map_1F",
 			areas : stores.filter(store => 
@@ -14,6 +15,7 @@ const floors = [
 	{
 		id : "2F",
 		mapImg : "./images/2F.png",
+		imgWidth : 572,
 		linkMap : {
 			name : "map_1F",
 			areas : stores.filter(store => 
@@ -24,6 +26,7 @@ const floors = [
 	{
 		id : "3F",
 		mapImg : "./images/3F.png",
+		imgWidth : 572,
 		linkMap : {
 			name : "map_1F",
 			areas : stores.filter(store => 

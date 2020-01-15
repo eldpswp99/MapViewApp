@@ -1,6 +1,6 @@
 import React from "react";
 
-function StoreInfo({store}){
+function PopUpInfo({store}){
 	
 	const {openHour,callNumber,keyWord} = store;
 	return (
@@ -17,4 +17,4 @@ function StoreInfo({store}){
 	);
 }
 
-export default StoreInfo;
+export default PopUpInfo;

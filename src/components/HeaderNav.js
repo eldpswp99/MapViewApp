@@ -1,11 +1,12 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import floors from "../data/floors";
+import "./HeaderNav.css";
 
 
 class HeaderNav extends React.Component{
 	render(){
-		const {id,mapImg,linkMap} = floors[0];
+		const {id,mapImg,linkMap,imgWidth} = floors[0];
 		
 		return (
 			<nav className = "headernav">
@@ -15,12 +16,21 @@ class HeaderNav extends React.Component{
 										state : {
 											id,
 											mapImg,
+											imgWidth,
 											linkMap
 										}
-					}}>층별 안내</Link>
+					}}>
+						<div className = "linkcontent">
+						층별 안내
+						</div>	
+						</Link>
 				</div>
 				<div className = "link">
-					<Link to = "/category">카테고리별 안내</Link>
+					<Link to = "/category">
+						<div className = "linkcontent">
+						카테고리별 안내
+						</div>	
+					</Link>
 				</div>
 			</nav>
 		);

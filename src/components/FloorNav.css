@@ -1,0 +1,23 @@
+.floornav {
+	border : 1px solid black;
+	display : table;
+	width : 100%;
+	background : #444;
+	height: 40px;
+	table-layout: fixed;
+	border-collapse : collapse;
+}
+
+.floorlink{
+	display : table-cell;
+	vertical-align : middle;
+	border : 1px solid black;
+	text-align : center;
+	border-collapse : collapse;
+	
+}
+
+.floorlink a{
+	color : white;
+}
+
