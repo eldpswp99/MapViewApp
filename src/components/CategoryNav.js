@@ -1,13 +1,18 @@
 import React from "react";
+import "./CategoryNav.css";
+import categories from "../data/categories";
 
 class CategoryNav extends React.Component{
+	
 	render(){
-		const {category,action} =  this.props;
+		const {category,action,selected} =  this.props;
 		
 		return (
-			<div className = "categorynavelem" onClick = {() => (
-					action(category)
-				)}>
+			<div className = {category === selected ? "selected" :"categorynavelem"} onClick = {() => 
+					{
+						action(category);
+					}
+				}>
 				{category}
 			</div>
 		);

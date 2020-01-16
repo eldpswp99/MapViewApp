@@ -1,14 +1,4 @@
-.map {
-	margin : 30px 5%;
-	
-}
-
-.map img{
-	
-}
-
-.categorynav{
-	
+.categoryheadnav{
 	border : 1px solid black;
 	display : table;
 	width : 100%;
@@ -16,9 +6,5 @@
 	height: 40px;
 	table-layout: fixed;
 	border-collapse : collapse;
-}
-
-.selected{
-	color : white;
-	background :#ee7047;
+	margin-bottom:20px;
 }

@@ -15,7 +15,7 @@ class Floor extends React.Component{
 				
 		this.state = {
 			popUp : undefined,
-			category : "All"
+			category : "All",
 		};
 
 		this.setIsPopUp = this.setIsPopUp.bind(this);
@@ -32,7 +32,7 @@ class Floor extends React.Component{
 	setCategory(arg){
 		this.setState({
 			...this.state,
-			category : arg
+			category : arg,
 		});
 	}
 		
@@ -53,12 +53,16 @@ class Floor extends React.Component{
 	}
 		
 	const {linkMap : {areas}} = state;
-	const {popUp,category} = this.state;
-	console.log(this.state);
+	const {popUp,category,selectedCategory} = this.state;
 	return (
 		<div className = "floor">
 			
 		<FloorNav />	
+		<div className = "categorynav">
+			{categories.map(categoryelem => 
+				(<CategoryNav category = {categoryelem} action = {this.setCategory} key = {categoryelem} selected = {category} />)
+			)}
+		</div>
 			<div className = "map">
 				<ImageMapper className = "mapimg" src = {state.mapImg} map ={state.linkMap}
 					onClick = {area => {this.setIsPopUp(area._id,true)}}
@@ -67,11 +71,7 @@ class Floor extends React.Component{
 				/>
 			</div>
 						
-			<div className = "categorynav">
-				{categories.map(category => 
-					(<CategoryNav category = {category} action = {this.setCategory} key = {category}/>)
-				)}
-			</div>
+		
 			
 			<div className = "floorstorelist">
 				<StoreList floor = {state.id} stores = {areas} category = {category} action = {this.setIsPopUp}></StoreList>

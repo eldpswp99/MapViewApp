@@ -7,10 +7,14 @@ import "./HeaderNav.css";
 class HeaderNav extends React.Component{
 	render(){
 		const {id,mapImg,linkMap,imgWidth} = floors[0];
+		const {action,selected} = this.props;
 		
 		return (
 			<nav className = "headernav">
-				<div className = "link">
+				<div className = {selected === "Floor" ? "selected" : "link"}
+					onClick = {() => {
+						action("Floor");
+					}}>
 					<Link to = {{
 										pathname : `/floor/${id}`,
 										state : {
@@ -25,7 +29,7 @@ class HeaderNav extends React.Component{
 						</div>	
 						</Link>
 				</div>
-				<div className = "link">
+				<div className = {selected === "Category" ? "selected" : "link"} onClick = {() => {action("Category")}}>
 					<Link to = "/category">
 						<div className = "linkcontent">
 						카테고리별 안내

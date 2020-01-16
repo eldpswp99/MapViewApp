@@ -1,5 +1,6 @@
 import React from "react";
 import StoreInfo from "./StoreInfo";
+import "./StoreList.css";
 
 class StoreList extends React.Component{
 	render(){

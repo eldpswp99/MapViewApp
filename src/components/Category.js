@@ -5,6 +5,7 @@ import StoreList from "./StoreList";
 import stores from "../data/stores";
 import SearchForm from "./SearchForm"
 import PopUp from "./PopUp";
+import "./Category.css";
 
 class Category extends React.Component{
 	constructor(props){
@@ -19,6 +20,7 @@ class Category extends React.Component{
 		this.setIsPopUp = this.setIsPopUp.bind(this);
 		this.setSearch = this.setSearch.bind(this);
 		this.setCategory = this.setCategory.bind(this);
+		this.setSelected = this.setSelected.bind(this);
 	}
 	
 	setIsPopUp(arg,isPopUp){
@@ -42,13 +44,20 @@ class Category extends React.Component{
 		})
 	}
 	
+	setSelected(arg){
+		this.setState({
+			...this.state,
+			selected : arg
+		})
+	}
+	
 	render(){
-		const {search,popUp,category} = this.state;
+		const {search,popUp,category,selected} = this.state;
 		
 		return (<div className = "categorycontainer">
 			<div className = "categoryheadnav">
-					{categories.map(category => 
-					(<CategoryNav category = {category} action = {this.setCategory} key = {category}/>)
+					{categories.map(categoryelem => 
+					(<CategoryNav category = {categoryelem} action = {this.setCategory} key = {categoryelem} selected = {category}/>)
 				)}
 			</div>
 				
