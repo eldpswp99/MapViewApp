@@ -1,5 +1,6 @@
 import React from "react";
 import StoreInfo from "./StoreInfo";
+import ListInfo from "./ListInfo";
 import "./StoreList.css";
 
 class StoreList extends React.Component{
@@ -16,9 +17,8 @@ class StoreList extends React.Component{
 								 &&(!search || store._id.includes(search))) ?
 					(<li className = "store" key = {store._id} onClick = {() => {
 								action(store._id,true);
-							}}>
-					<img className = "listoreimg" src = {store.storeImg} alt = {store.name} ></img> 
-					<StoreInfo store = {store} />
+							}}>					
+					<ListInfo store = {store} />
 					</li>) : ""}
 				)}
 			</ul>);

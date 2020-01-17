@@ -1,0 +1,52 @@
+.popupwrapper{
+	margin-top:20%;
+	width:100%;
+	min-height:100%;
+	z-index:999;
+	position:absolute;
+	top:0;
+	left:0;
+	background:white;
+}
+
+.store-popup{
+	margin-top:20%;
+	width:100%;
+	min-height:100%;
+	z-index:999;
+	position:absolute;
+	top:0;
+	left:0;
+	background:white;
+}
+
+.popupimg{
+	width : 90%;
+	height: 60%;
+}
+
+.btndiv{
+	background:#ee7047;
+	width:100%;
+	height: 40px;
+	padding-top:5px;
+}
+
+.popup-remove-btn{
+	width : 15.5%;
+	height: 100%;
+	border : 0px;
+	background : #ee7047;
+	outline :none;
+	float:right;
+	font-size:16px;
+	color:white;
+}
+
+.popup-content{
+	padding-left:15px;
+}
+
+.popupinfo tr,td{
+	width:50%;
+}

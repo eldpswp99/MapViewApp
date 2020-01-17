@@ -1,4 +1,5 @@
 import React from "react";
+import "./SearchForm.css";
 
 class SearchForm extends React.Component{
 	constructor(props){
@@ -33,7 +34,10 @@ class SearchForm extends React.Component{
 		
 		return (
 			<form className = "searchform" onSubmit = {this.handleSubmit}>
-				<input placeholder = "검색" value = {search} onChange = {this.handleChange} />
+				<div className = "search">
+					<input placeholder = "매장 검색" value = {search} onChange = {this.handleChange} />
+					<button type = "submit">검색</button>	
+				</div>
 			</form>
 		)
 	}

@@ -37,6 +37,7 @@ class Floor extends React.Component{
 	}
 		
 	render(){		
+		console.log(this.state);
 		const {location : {state}} = this.props;
 		if(!state){
 			const {id,mapImg,linkMap,imgWidth} = floors[0];			

@@ -1,3 +1,14 @@
 .store{
-	display : inline;	
+	display : inline-block;
+	width : 42.5%;
+	margin-left:5%;
+	margin-bottom:5%;
+	border : 1px solid #444;
+	text-align:center;
 }
+
+.storelist {
+	padding: 0;
+}
+
+

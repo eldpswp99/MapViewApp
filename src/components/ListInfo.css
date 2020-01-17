@@ -1,0 +1,26 @@
+.listoreimg{
+	width : 90%;
+	height : 80px;
+	margin-bottom : 0;
+}
+
+.storename{
+	font-size:20px;
+}
+
+.listinfotext{
+	background : #dcdcdc;
+}
+
+.subinfo p{
+	margin : 0 auto 10px 0;
+}
+
+#lastsub{
+	margin-bottom:0;
+}
+
+.storename{
+	margin-top : 0;
+	padding-top:5px;
+}
