@@ -1,6 +1,6 @@
 import React from "react";
 import "./CategoryNav.css";
-import categories from "../data/categories";
+
 
 class CategoryNav extends React.Component{
 	

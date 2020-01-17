@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderNav from "./HeaderNav";
 import "./Header.css";
+import {Link} from "react-router-dom";
 
 class Header extends React.Component{
 	constructor(props){
@@ -19,10 +20,20 @@ class Header extends React.Component{
 		})
 	}
 	
+	
+	
 	render(){
+
+		
 		return (
 			<header>
-				<h2 className = "title">알파돔타워</h2>
+				<div className = "title" onClick ={() => {
+						this.setSelected("Floor")
+					}}>
+					<Link to ="/">
+						<h2>알파돔타워</h2>
+					</Link>
+				</div>
 				<HeaderNav action = {this.setSelected} selected = {this.state.selected}/>
 			</header>	
 		);

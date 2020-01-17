@@ -4,12 +4,9 @@ import floors from "../data/floors";
 import "./FloorNav.css";
 
 class FloorNav extends React.Component{
-	state = {
-		selected : floors[0].id
-	}
-	
+		
 	render(){
-		const {selected} = this.state;
+		const {selected,action} = this.props;
 		
 		return (
 			<nav className = "floor">
@@ -23,13 +20,12 @@ class FloorNav extends React.Component{
 											id,
 											imgWidth,	
 											mapImg,
-											linkMap
+											linkMap,
+											redirected:false
 										}
 									}}>
 										<div className = "linkcontent" onClick = {() => {
-											this.setState({
-												selected : id
-											})
+											action(id);
 										}}>
 										{id}
 										</div>	

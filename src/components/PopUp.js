@@ -20,6 +20,7 @@ class PopUp extends React.Component{
 						<img className = "popupimg" src = {storeImg} alt = {name}></img>
 
 						<table className = "popupinfo">
+							<tbody>
 								<tr>
 									<th>매장종류</th>
 									<td>{keyWord}</td>
@@ -32,6 +33,7 @@ class PopUp extends React.Component{
 									<th>전화번호</th>
 									<td>{callNumber}</td>
 								</tr>
+							</tbody>
 						</table>
 						</div>
 

@@ -1,0 +1,10 @@
+header a h2{
+	text-decoration:none;
+	padding-left:10px;	
+	color:black;
+}
+
+
+.title{
+	-webkit-tap-highlight-color : transparent;
+}

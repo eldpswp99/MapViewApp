@@ -1,6 +1,6 @@
 import React from "react";
-import StoreInfo from "./StoreInfo";
 import ListInfo from "./ListInfo";
+import { goToTop } from 'react-scrollable-anchor';
 import "./StoreList.css";
 
 class StoreList extends React.Component{
@@ -16,6 +16,7 @@ class StoreList extends React.Component{
 									&& (category === store.category || category === "All")
 								 &&(!search || store._id.includes(search))) ?
 					(<li className = "store" key = {store._id} onClick = {() => {
+								goToTop();
 								action(store._id,true);
 							}}>					
 					<ListInfo store = {store} />

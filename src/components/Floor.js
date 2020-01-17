@@ -16,10 +16,12 @@ class Floor extends React.Component{
 		this.state = {
 			popUp : undefined,
 			category : "All",
+			floor:"1F"
 		};
 
 		this.setIsPopUp = this.setIsPopUp.bind(this);
 		this.setCategory = this.setCategory.bind(this);
+		this.setFloor = this.setFloor.bind(this);
 	}
 	
 	setIsPopUp(arg,isPopUp){
@@ -35,10 +37,17 @@ class Floor extends React.Component{
 			category : arg,
 		});
 	}
+	
+	setFloor(arg){
+		this.setState({
+			...this.state,
+			floor : arg
+		});
+	}
 		
 	render(){		
-		console.log(this.state);
 		const {location : {state}} = this.props;
+		
 		if(!state){
 			const {id,mapImg,linkMap,imgWidth} = floors[0];			
 		
@@ -48,17 +57,19 @@ class Floor extends React.Component{
 					id,
 					mapImg,
 					imgWidth,
-					linkMap
+					linkMap,
 				}
 			}}/>);	
 	}
+	
+		const {linkMap : {areas}} = state;
+		const {popUp,category,floor} = this.state;
+				
+	return (	
 		
-	const {linkMap : {areas}} = state;
-	const {popUp,category,selectedCategory} = this.state;
-	return (
 		<div className = "floor">
 			
-		<FloorNav />	
+		<FloorNav action = {this.setFloor} selected = {floor}/>	
 		<div className = "categorynav">
 			{categories.map(categoryelem => 
 				(<CategoryNav category = {categoryelem} action = {this.setCategory} key = {categoryelem} selected = {category} />)

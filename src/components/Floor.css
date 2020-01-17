@@ -24,3 +24,8 @@
 	color : white;
 	background :#ee7047;
 }
+
+.map img, .map a, .map canvas{
+	-webkit-tap-highlight-color : transparent;
+	outline:none;
+}
