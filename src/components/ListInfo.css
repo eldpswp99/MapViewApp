@@ -8,8 +8,10 @@
 	font-size:20px;
 }
 
-.listinfotext{
+.listinfotext, .listinfotext:visited{
 	background : #dcdcdc;
+	color : black;
+	text-decoration:none;
 }
 
 .subinfo p{

@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./ListInfo.css";
 
 function ListInfo({store}){

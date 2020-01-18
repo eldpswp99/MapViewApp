@@ -1,4 +1,4 @@
-.categorynavelem, .selected{
+.categorynavelem, .selected, .categorynavelem:visited{
 	display : table-cell;
 	vertical-align : middle;
 	border : 1px solid #444;
@@ -6,4 +6,14 @@
 	border-collapse : collapse;
 	color:#444;
 	-webkit-tap-highlight-color : transparent;
+	text-decoration:none;
+}
+
+.selected{
+	background : #ee7047;
+	color: white;
+}
+
+.categorynavelem a, .categorynavelem:visited{
+	color:#444;
 }

@@ -1,40 +1,23 @@
 import React from "react";
-import HeaderNav from "./HeaderNav";
-import "./Header.css";
 import {Link} from "react-router-dom";
 
-class Header extends React.Component{
-	constructor(props){
-		super(props);
-		
-		this.state = {
-			selected : "Floor"
-		}
-		
-		this.setSelected = this.setSelected.bind(this);
-	}
-	
-	setSelected(arg){
-		this.setState({
-			selected : arg
-		})
-	}
-	
-	
-	
-	render(){
+import HeaderNav from "./HeaderNav";
 
+import "./Header.css";
+
+
+class Header extends React.Component{
+	render(){
+		const {selected} = this.props;
 		
 		return (
 			<header>
-				<div className = "title" onClick ={() => {
-						this.setSelected("Floor")
-					}}>
-					<Link to ="/">
+				<div className = "title">
+					<Link to ="/floor/1F/All">
 						<h2>알파돔타워</h2>
 					</Link>
 				</div>
-				<HeaderNav action = {this.setSelected} selected = {this.state.selected}/>
+				<HeaderNav selected = {selected}/>
 			</header>	
 		);
 	}

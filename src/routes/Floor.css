@@ -6,9 +6,6 @@
 .map img{
 	
 }
-
-
-
 .categorynav{
 	
 	border : 1px solid black;
@@ -18,11 +15,6 @@
 	height: 40px;
 	table-layout: fixed;
 	border-collapse : collapse;
-}
-
-.selected{
-	color : white;
-	background :#ee7047;
 }
 
 .map img, .map a, .map canvas{
