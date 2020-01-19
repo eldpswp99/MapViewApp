@@ -1,5 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom"; 
+import {HashRouter,Route,Switch} from "react-router-dom";
 
 import categories from "../data/categories";
 import stores from "../data/stores";
@@ -7,7 +8,9 @@ import stores from "../data/stores";
 import Header from "../components/Header";
 import CategoryNav from "../components/CategoryNav";
 import StoreList from "../components/StoreList";
-import SearchForm from "../components/SearchForm"
+import SearchForm from "../components/SearchForm";
+
+import PopUp from "./PopUp";
 
 import "./Category.css";
 
@@ -47,9 +50,13 @@ class Category extends React.Component{
 
 				<SearchForm action = {this.setSearch}/>	
 
-				<div className = "categorystorelist">
-					<StoreList search = {search} category = {category} stores = {stores} />
-				</div>
+				<HashRouter>
+					<div className = "categorystorelist">
+						<StoreList prev = {`/category/${category}`} search = {search} category = {category} stores = {stores} />
+					</div>
+					
+					<Route path = {"/category/:category/storedetail/:popup"} component = {PopUp} />
+				</HashRouter>
 
 			</div>
 		)

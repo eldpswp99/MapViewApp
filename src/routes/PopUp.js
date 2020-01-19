@@ -11,7 +11,6 @@ class PopUp extends React.Component{
 	render(){	
 
 		const {popup} = this.props.match.params;
-		
 		const store = stores.find(store => 
 			store._id === popup
 		);

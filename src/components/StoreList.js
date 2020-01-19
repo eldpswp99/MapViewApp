@@ -9,7 +9,7 @@ import "./StoreList.css";
 class StoreList extends React.Component{
 	render(){
 		
-		const {floor,search,stores, category} = this.props;
+		const {prev,floor,search,stores, category} = this.props;
 		
 		return (
 			<ul className = "storelist">
@@ -19,11 +19,11 @@ class StoreList extends React.Component{
 									&& (category === store.category || category === "All")
 								 &&(!search || store._id.includes(search))) ?
 						(<Link to = {{
-								pathname : `/storedetail/${store._id}`,
-							}}>
+								pathname : `${prev}/storedetail/${store._id}`,
+							}} key = {store._id}>
 							<li className = "store" key = {store._id} onClick ={goToTop}>
-							<ListInfo store = {store} />
-						</li>
+								<ListInfo store = {store} />
+							</li>
 					</Link>) : ""}
 				)}
 			</ul>);

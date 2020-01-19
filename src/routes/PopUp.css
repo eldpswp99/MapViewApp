@@ -1,15 +1,22 @@
 .popupwrapper{
-	left : 0;
-	top : 30px;
-	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%; 
 	min-height:100%;
 	background-color: rgba(0,0,0,0.4); 
 	overflow:auto;
+	z-index:999;
 }
 
 .store-popup{
 	width:100%;
-	min-height:100%;
+	top:100px;
+	position:absolute;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
 	background:white;
 	border:0px;
 }
@@ -27,6 +34,7 @@
 }
 
 .popup-remove-btn{
+	cursor:pointer;
 	width : 40px;
 	height: 100%;
 	border : 0px;
@@ -44,10 +52,35 @@
 .popupinfo{
 	margin : 0 auto;
 	width:90%;
+	padding:15px;
+	padding-bottom:30px;
 }
 
 .popupinfo tr,td,th{
 	width:10%;
 	text-align : left;
 	color:black;
+}
+
+@media screen and (min-width:768px){
+	.store-popup{
+		width:350px;
+		max-width:686px;
+	}
+	
+	.popupimg{
+		margin:0 auto;
+		max-width : 300px;
+	}
+	
+	.store-popup{
+	top:150px;
+	position:absolute;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+	
 }

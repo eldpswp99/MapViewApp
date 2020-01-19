@@ -9,13 +9,15 @@ html, body ,root {
 	padding: 0;
 	-webkit-text-size-adjust: none;
 	min-width : 320px;
-	
+	max-width : 980px;	
+	overflow:auto;
+	height:100%;
 }
 
 .container{
 	width : 100%;	
 	font-family: 'Nanum Gothic', sans-serif;
-	position:relative;
+	position:static;
 }
 
 

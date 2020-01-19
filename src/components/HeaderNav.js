@@ -14,7 +14,7 @@ class HeaderNav extends React.Component{
 		return (
 			<nav className = "headernav">
 				{mainmenu.map(menu => (
-					<div className = {selected === menu.menu ? "selected" : "link"}>
+				<div className = {selected === menu.menu ? "selected" : "link"} key = {menu.menu}>
 					<Link to = {`/${menu.menu}`}>
 						<div className = "linkcontent">
 							{menu.guide}
