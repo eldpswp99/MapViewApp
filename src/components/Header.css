@@ -1,10 +1,19 @@
-header a h2{
-	text-decoration:none;
-	padding-left:10px;	
-	color:black;
-}
-
-
 .title{
 	-webkit-tap-highlight-color : transparent;
+	padding:5px 5px 0px 5px;
+	text-align:center;
+	border-bottom:1px solid rgba(0,0,0,0.2);
+	
+}
+
+header{
+	background:white;
+}
+
+.title a{
+}
+
+.logo{
+	width:60px;
+	
 }

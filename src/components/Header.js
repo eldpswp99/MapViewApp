@@ -1,23 +1,18 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-import HeaderNav from "./HeaderNav";
-
 import "./Header.css";
 
 
 class Header extends React.Component{
-	render(){
-		const {selected} = this.props;
-		
+	render(){		
 		return (
 			<header>
 				<div className = "title">
 					<Link to ="/floor/1F/All">
-						<h2>알파돔타워</h2>
+						<img className = "logo" src = "./images/logo.png" alt = "logo"></img>
 					</Link>
 				</div>
-				<HeaderNav selected = {selected}/>
 			</header>	
 		);
 	}

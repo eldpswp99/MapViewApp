@@ -9,14 +9,14 @@ import "./HeaderNav.css";
 
 class HeaderNav extends React.Component{
 	render(){
-		const {selected} = this.props;
+		const {selected,isLast} = this.props;
 		
 		return (
 			<nav className = "headernav">
 				{mainmenu.map(menu => (
 				<div className = {selected === menu.menu ? "selected" : "link"} key = {menu.menu}>
 					<Link to = {`/${menu.menu}`}>
-						<div className = "linkcontent">
+						<div className = {isLast(menu,mainmenu) ? "lastcontent" :"linkcontent" }>
 							{menu.guide}
 						</div>	
 					</Link>

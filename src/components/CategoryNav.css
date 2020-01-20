@@ -1,19 +1,24 @@
 .categorynavelem, .selected, .categorynavelem:visited{
 	display : table-cell;
 	vertical-align : middle;
-	border : 1px solid #444;
 	text-align : center;
-	border-collapse : collapse;
 	color:#444;
 	-webkit-tap-highlight-color : transparent;
 	text-decoration:none;
+	font-size:14px;
 }
 
 .selected{
-	background : #ee7047;
-	color: white;
+	
 }
 
 .categorynavelem a, .categorynavelem:visited{
 	color:#444;
 }
+
+@media screen and (min-width:768px){
+	.categorynavelem, .selected, .categorynavelem:visited{
+		font-size:16px;
+	}
+}
+

@@ -1,18 +1,17 @@
 .floornav {
-	border : 1px solid #444;
+	border-top:1px solid rgba(0,0,0,0.2);
 	display : table;
 	width : 100%;
 	background : white;
 	height: 40px;
 	table-layout: fixed;
 	border-collapse : collapse;
-	margin-bottom:10px;
+	font-size:14px;
 }
 
 .floorlink{
 	display : table-cell;
 	vertical-align : middle;
-	border : 1px solid #444;
 	text-align : center;
 	border-collapse : collapse;
 	-webkit-tap-highlight-color : transparent;
@@ -24,5 +23,10 @@
 
 .selected{
 	color : white;
-	background :#ee7047;
+}
+
+@media screen and (min-width:768px){
+	.floornav{
+		font-size:16px;
+	}
 }

@@ -3,7 +3,7 @@ import stores from "../data/stores";
 const floors = [
 	{
 		floor : "1F",
-		mapImg : "./images/1F.png",
+		mapImg : "./images/1F.jpg",
 		imgWidth : 572,
 		linkMap : {
 			name : "map_1F",

@@ -6,9 +6,9 @@ import floors from "../data/floors";
 import "./FloorNav.css";
 
 class FloorNav extends React.Component{
-		
+	
 	render(){
-		const {selected} = this.props;
+		const {isLast,selected} = this.props;
 		
 		return (
 			<nav className = "floor">
@@ -17,7 +17,7 @@ class FloorNav extends React.Component{
 						floors.map(({floor}) => (
 							<div key = {floor} className = {selected === floor ? "selected" : "floorlink"}>
 								<Link to = {`/floor/${floor}/All`}>
-										<div className = "linkcontent">
+										<div className = {isLast(floor,floors) ? "lastcontent" :"linkcontent"}>
 										{floor}
 										</div>	
 									</Link>

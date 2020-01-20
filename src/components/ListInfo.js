@@ -11,7 +11,7 @@ function ListInfo({store}){
 			<div className = "listinfotext">
 				<h1 className = "storename">{_id}</h1>
 				<div className = "subinfo">
-					<p>{keyWord}</p>
+					<p className = "keyword">{keyWord}</p>
 					<p id = "lastsub">{location}</p>
 				</div>
 			</div>

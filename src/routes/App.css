@@ -1,22 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 
 *{
 	box-sizing:border-box;
 }
 
 html, body ,root {
-	margin : 0 auto;
-	padding: 0;
-	-webkit-text-size-adjust: none;
-	min-width : 320px;
-	max-width : 980px;	
-	overflow:auto;
-	height:100%;
+	margin:0;
+	padding:0;
+	z-index:-2;
 }
 
 .container{
 	width : 100%;	
-	font-family: 'Nanum Gothic', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 	position:static;
 }
 

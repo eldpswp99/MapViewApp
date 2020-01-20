@@ -21,7 +21,7 @@ class StoreList extends React.Component{
 						(<Link to = {{
 								pathname : `${prev}/storedetail/${store._id}`,
 							}} key = {store._id}>
-							<li className = "store" key = {store._id} onClick ={goToTop}>
+							<li className = "store" key = {store._id}>
 								<ListInfo store = {store} />
 							</li>
 					</Link>) : ""}
